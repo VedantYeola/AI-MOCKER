@@ -118,8 +118,9 @@ function Header() {
     // <div className="flex p-4 items-center justify-between bg-secondary shadow-sm">
     //   <Image src="/AI MOCK INTERVIEW.png" width={100} height={30} alt="logo" />
     <div className="flex items-center justify-between bg-secondary border-b border-transparent shadow-sm">
-      <div><Image src="/logo Ai.png" width={80} height={20} alt="logo" ></Image>
-      <h6>AI Mock Interview ✨</h6>
+      <div>
+        <Image className="ml-10" src="/logo Ai.png" width={80} height={20} alt="logo"></Image>
+        <h6 className="ml-5">AI Mock Interview ✨</h6>
       </div>
 
       <ul className="hidden md:flex gap-6">
@@ -168,8 +169,6 @@ function Header() {
 
 export default Header;
 
-
-
 // "use client";
 // import { UserButton } from "@clerk/nextjs";
 // import Image from "next/image";
@@ -192,7 +191,7 @@ export default Header;
 //         <li>
 //           <Link
 //             href="/dashboard"
-//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer
 //               ${path === "/dashboard" && "text-primary font-bold"}`}
 //           >
 //             Dashboard
@@ -201,7 +200,7 @@ export default Header;
 //         <li>
 //           <Link
 //             href="/dashboard/question"
-//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer
 //               ${path === "/dashboard/question" && "text-primary font-bold"}`}
 //           >
 //             Questions
@@ -210,7 +209,7 @@ export default Header;
 //         <li>
 //           <Link
 //             href="/dashboard/upgrade"
-//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer
 //               ${path === "/dashboard/upgrade" && "text-primary font-bold"}`}
 //           >
 //             Upgrade
@@ -219,7 +218,7 @@ export default Header;
 //         <li>
 //           <Link
 //             href="/dashboard/how"
-//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+//             className={`hover:text-primary hover:font-bold transition-all cursor-pointer
 //               ${path === "/dashboard/how" && "text-primary font-bold"}`}
 //           >
 //             How it Works?

@@ -131,7 +131,7 @@ function TestInstructions() {
                 onClick={startTest}
                 className="bg-green-500 text-white px-6 py-3 rounded-lg text-lg shadow-md hover:bg-green-400 transition"
               >
-                Start Test 🚀
+                Let Start 🚀
               </Button>
             </div>
           </div>
