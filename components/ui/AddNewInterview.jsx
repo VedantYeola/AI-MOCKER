@@ -119,70 +119,69 @@ function AddNewInterview() {
               Tell us about your job Interview
             </DialogTitle>
             <DialogDescription>
-              <form onSubmit={onSubmit}>
-                <div>
-                  <h2>
-                    Add details about your job position, role, job description,
-                    and years of experience
-                  </h2>
-                  <div className="mt-7 my-3">
-                    <label>Job Role/Job Position</label>
-                    <Input
-                      placeholder="Ex. Full Stack Developer"
-                      className="bg-white text-black border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
-                      required
-                      value={jobPosition}
-                      onChange={(event) => setJobPosition(event.target.value)}
-                    />
-                  </div>
-                  <div className="mt-7 my-3">
-                    <label>Job Description/ Tech Stack (In Short)</label>
-                    <Textarea
-                      placeholder="Ex. React, Angular, Nodejs, MySql etc"
-                      className="bg-white text-black border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
-                      required
-                      value={jobDesc}
-                      onChange={(event) => setJobDesc(event.target.value)}
-                    />
-                  </div>
-                  <div className="mt-7 my-3">
-                    <label>Years of Experience</label>
-                    <Input
-                      placeholder="Ex. 5"
-                      type="number"
-                      min="0"
-                      max="100"
-                      className="bg-white text-black border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
-                      required
-                      value={jobExperience}
-                      onChange={(event) => setJobExperience(event.target.value)}
-                    />
-                  </div>
-                </div>
-                <div className="flex gap-5 justify-end">
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    onClick={() => setOpenDialog(false)}
-                  >
-                    Cancel
-                  </Button>
-                  <Button type="submit" disabled={loading}>
-                    {loading ? (
-                      <>
-                        <LoaderCircle className="animate-spin" /> Generating from AI✨
-                      </>
-                    ) : (
-                      "Start Interview"
-                    )}
-                  </Button>
-                </div>
-              </form>
+              Add details about your job position, role, job description, and years of experience
             </DialogDescription>
+
+            <form onSubmit={onSubmit}>
+              <div>
+
+                <div className="mt-7 my-3">
+                  <label>Job Role/Job Position</label>
+                  <Input
+                    placeholder="Ex. Full Stack Developer"
+                    className="bg-white text-black border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
+                    required
+                    value={jobPosition}
+                    onChange={(event) => setJobPosition(event.target.value)}
+                  />
+                </div>
+                <div className="mt-7 my-3">
+                  <label>Job Description/ Tech Stack (In Short)</label>
+                  <Textarea
+                    placeholder="Ex. React, Angular, Nodejs, MySql etc"
+                    className="bg-white text-black border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
+                    required
+                    value={jobDesc}
+                    onChange={(event) => setJobDesc(event.target.value)}
+                  />
+                </div>
+                <div className="mt-7 my-3">
+                  <label>Years of Experience</label>
+                  <Input
+                    placeholder="Ex. 5"
+                    type="number"
+                    min="0"
+                    max="100"
+                    className="bg-white text-black border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm"
+                    required
+                    value={jobExperience}
+                    onChange={(event) => setJobExperience(event.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="flex gap-5 justify-end">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  onClick={() => setOpenDialog(false)}
+                >
+                  Cancel
+                </Button>
+                <Button type="submit" disabled={loading}>
+                  {loading ? (
+                    <>
+                      <LoaderCircle className="animate-spin" /> Generating from AI✨
+                    </>
+                  ) : (
+                    "Start Interview"
+                  )}
+                </Button>
+              </div>
+            </form>
           </DialogHeader>
         </DialogContent>
       </Dialog>
-    </div>
+    </div >
   );
 }
 

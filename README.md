@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Interview Mocker 🤖
 
-## Getting Started
+An advanced AI-powered mock interview application designed to help users prepare for job interviews. This application leverages **Google Gemini AI** to generate personalized interview questions and provide feedback based on user responses.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **AI-Powered Question Generation**: Generates 5 curated interview questions based on Job Role, Description, and Experience level using **Google Gemini 2.0 Flash**.
+- **Interactive Interview Session**: Records user audio and provides real-time transcription.
+- **Instant Feedback**: Analyzes user answers and provides a rating and constructive feedback.
+- **Dashboard**: Manage past interviews and view performance history.
+- **Secure Authentication**: Integrated with **Clerk** for secure user sign-up and sign-in.
+- **Responsive Design**: Built with modern UI components using **Radix UI** and **Tailwind CSS**.
+
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Language**: JavaScript
+- **Styling**: Tailwind CSS, Lucide React
+- **Database**: PostgreSQL (via [Neon](https://neon.tech/))
+- **ORM**: [Drizzle ORM](https://orm.drizzle.team/)
+- **Authentication**: [Clerk](https://clerk.com/)
+- **AI Model**: Google Gemini 2.0 Flash (`gemini-2.0-flash`)
+
+## ⚙️ Environment Variables
+
+To run this project, you will need to add the following environment variables to your `.env.local` file:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+NEXT_DRIZZLE_DATABASE_URL=postgresql://...
+
+NEXT_PUBLIC_GEMINI_API_KEY=AIza...
+NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT=5
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏃‍♂️ Getting Started
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/ai-interview-mocker.git
+    cd ai-interview-mocker
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Learn More
+3.  **Setup Database**:
+    Push the schema to your Neon PostgreSQL database:
+    ```bash
+    npm run db:push
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+4.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 Scripts
 
-## Deploy on Vercel
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run lint`: Runs the linter.
+- `npm run db:push`: Pushes schema changes to the database.
+- `npm run db:studio`: Opens Drizzle Studio to manage database records.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
