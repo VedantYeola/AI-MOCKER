@@ -423,7 +423,7 @@ function RecordAnswerSection({ MockInterviewQuestion, activeQuestionIndex, inter
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col mt-20 items-center justify-center bg-black rounded-lg p-5 relative">
+      <div className="flex flex-col mt-10 md:mt-20 items-center justify-center bg-black rounded-lg p-5 relative">
         <Image src="/webcam.png" width={200} height={200} alt="Webcam preview" className="absolute" />
         <Webcam mirrored={true} onUserMediaError={handleWebcamError} style={{ height: 300, width: "100%", zIndex: 10 }} />
       </div>

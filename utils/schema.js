@@ -51,6 +51,7 @@ export const MockInterview = pgTable("mockInterview", {
   createdBy: varchar("createdBy").notNull(),
   createdAt: varchar("createdAt"),
   mockId: varchar("mockId").notNull().unique(), // Unique ID for each mock interview
+  currentInstanceId: varchar("currentInstanceId"), // Track active session
 });
 
 // UserAnswer Table (Stores User Responses)

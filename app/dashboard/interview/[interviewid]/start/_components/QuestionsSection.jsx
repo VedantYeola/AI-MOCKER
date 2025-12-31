@@ -18,8 +18,8 @@ function QuestionsSection({ MockInterviewQuestion, activeQuestionIndex }) {
       borderRadius: "8px",
       padding: "20px"
     }}
-      className="p-5 border rounded-lg my-10">
-      
+      className="p-5 border rounded-lg my-5 md:my-10">
+
       {/* Question List */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {MockInterviewQuestion.map((question, index) => (
